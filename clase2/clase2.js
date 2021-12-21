@@ -1,50 +1,53 @@
 class Usuario {
 
-    constructor(nombre, apellido, libro, mascota) {
+    constructor(nombre, apellido, libros = [], mascotas = []) {
         this.nombre = nombre
         this.apellido = apellido
-        this.libro = libro
-        this.mascota = mascota
-        this.mascotas = []
-        this.libros = []
+        this.libros = libros
+        this.mascotas = mascotas
     }
 
     getFullName() {
-        return `${this.nombre} ${this.apellido}`
+        return console.log(`${this.nombre} ${this.apellido}`)
     }
 
-    addMascotas() {
+    addMascotas(mascota) {
 
-        this.mascotas.push(`${this.mascota}`, 'gato', 'pajaro', 'pez')
+        for (let i = 0; i < mascota.length; i++) {
+             this.mascotas.push(mascota[i]);     
+        }
 
-        return this.mascotas
+        return console.log(this.mascotas)
     }
 
     countMascotas() {
-        return this.mascotas.length
+        return console.log(this.mascotas.length)
     }
 
-    AddBook() {
+    AddBook(libro) {
 
-     this.libros.push({ nombre: 'videojuegos', autor: 'pepe' },
-            { nombre: 'programacion', autor: 'jose' },
-            (this.libro))
-        return this.libros
+        for (let i = 0; i < libro.length; i++) {
+           this.libros.push(libro[i]);     
+        }
+        
+        return console.log(this.libros)
     }
 
     getBookNames() {
-        return this.libros.map((libro) => {
-            return libro.nombre;
-        })
+        return console.log (this.libros.map((libro) => {
+            return libro.nombre
+        }))
     }
 }
 
-const julian = new Usuario('Julian', 'Grimaux', { nombre: 'politica', autor: 'juan' }, 'perro')
+const julian = new Usuario('Julian', 'Grimaux', [{ nombre: 'politica', autor: 'juan' }],['perro','gato'])
 
-console.log(julian.getFullName())
-console.log(julian.addMascotas())
-console.log(julian.countMascotas())
-console.log(julian.AddBook())
-console.log(julian.getBookNames())
+julian.getFullName()
+julian.addMascotas(['pez'])
+julian.countMascotas()
+julian.AddBook([{nombre:'videojuegos', autor:'jose'}])
+julian.getBookNames()
+
+
 
 
