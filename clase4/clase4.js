@@ -48,26 +48,6 @@ class Contenedor{
         return this.data;
     }
 
-    async deleteById(id){
-        if(this.data[id]){
-            this.data.objects --;
-            this.data[id] = '';
-            delete this.data[ id ];
-            await this.rewritre();
-            console.log(`Borrado el objeto ${id} de ${this.archivo}.txt`); 
-            return true
-        }
-        console.error(`Producto no encontrado`);
-    }
-
-    async deleteAll(cb){
-        try {
-            await this.fs.promises.unlink(`./${this.archivo}.txt`);
-            
-        } catch (error) {
-            console.error(`No se pudo borrar archivo : ${error}`);
-        }
-    }
 }
 
 module.exports = Contenedor;

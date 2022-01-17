@@ -1,31 +1,26 @@
 const Contenedor = require('./clase4');
 
-const contenedor = new Contenedor('prueba')
+const contenedor = new Contenedor('productos')
 
 contenedor.save({
-    title: 'prueba',
-    price: 5,
-    thumbnail : 'prueba.png'
-});
+    title: "Escuadra",
+    price: 123.45,
+    thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    id: 1
+  });
 
 contenedor.save({
-    title: 'prueba2',
-    price: 10,
-    thumbnail : 'prueba.png'
-});
+    title: "Calculadora",
+    price: 234.56,
+    thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+    id: 2
+  });
 
 contenedor.save({
-    title: 'prueba3',
-    price: 20,
-    thumbnail : 'prueba.png'
-});
+    title: "Globo Terráqueo",
+    price: 345.67,
+    thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+    id: 3
+  });
 
-contenedor.save({
-    title: 'prueba4',
-    price: 50,
-    thumbnail : 'prueba.png'
-});
 
-contenedor.deleteById(1);
-console.table(contenedor.getAll()); 
-contenedor.deleteAll();
