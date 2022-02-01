@@ -1,0 +1,31 @@
+<% if(items.length > 0 ){%>
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <tr style="color: yellow;">
+                <th>Title</th>
+                <th>Price</th>
+                <th>Thumbnail</th>
+            </tr>
+            <%items.forEach(function(item) {%>
+                <tr>
+                    <td>
+                        <%=item.title%>
+                    </td>
+                    <td>
+                        <%=item.price%>
+                    </td>
+                    <td>
+                        <img src="<%=item.thumbnail%>" style="height: 24px; width: 24px;"></img>
+                    </td>
+                </tr>
+                <%});%>
+                    <%}else{%>
+                        <h3 class="alert alert-danger">
+                            <%= mensaje %>
+                                </h1>
+                                <%}%>
+        </table>
+
+
+
+    </div>
