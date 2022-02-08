@@ -15,3 +15,8 @@ app.get('/', (req,res) => {
 httpServer.listen(3000, ()=> {
     console.log('Server on')
 })
+
+io.on('connection', (socket) =>{
+    console.log('usuario conectado')
+    socket.emit('mi mensaje','hola socket')
+})
