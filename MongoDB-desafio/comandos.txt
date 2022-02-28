@@ -1,0 +1,72 @@
+/*
+
+// VER BASE DE DATOS
+
+use ecommerce
+
+//CREAR COLECCIONES Y CARGARLE DOCUMENTOS
+
+db.productos.insertMany([{nombre:'lapiz', precio: 120}, {nombre: 'cartuchera', precio: 580},{nombre:'libro', precio: 900}, {nombre: 'mochila', precio: 1280}, {nombre: 'calculadora', precio: 1700}, {nombre: 'calculadora cientifica', precio: 2300}, {nombre: 'bolso', precio:2860}, {nombre: 'campera', precio: 3350}, {nombre:'monitor', precio: 4320}, {nombre:'computadora', precio:4990}]);
+
+db.mensajes.insertMany([{email:'julian@gmail.com', mensaje:'hola', date: new Date()}, {email:'jose@gmail.com', mensaje:'si', date: new Date()}, {email:'juan@gmail.com', mensaje:'puede ser', date: new Date()}, {email:'pepe@gmail.com', mensaje:'no', date: new Date()}, {email:'agus@gmail.com', mensaje:'casi', date: new Date()}, {email:'marcos@gmail.com', mensaje:'hola', date: new Date()}, {email:'tiziano@gmail.com', mensaje:'test', date: new Date()}, {email:'leo@gmail.com', mensaje:'test x2', date: new Date()}, {email:'maxi@gmail.com', mensaje:'hola otra vez', date: new Date()}, {email:'valen@gmail.com', mensaje:'no', date: new Date()}])
+
+//LISTAR LOS DOCUMENTOS DE LAS DOS COLECCIONES
+
+db.productos.find().pretty()
+db.mensajes.find().pretty()
+
+//MOSTRAR LA CANTIDAD DE DOCUMENTOS ALMACENADOS
+
+db.mensajes.estimatedDocumentCount()
+db.productos.estimatedDocumentCount()
+
+//AGREGAR UN PRODUCTO MAS A LA COLECCION PRODUCTOS
+
+db.productos.insert({nombre:'bici', precio: 6000})
+
+//LISTAR LOS PRODUCTOS CON PRECIO MENOR A 1000
+
+db.productos.find({'precio':{$lt:1000}})
+
+//LISTAR LOS PRODUCTOS CON PRECIO ENTRE LOS 1000 Y 3000
+
+db.productos.find({'precio':{$gt:1000, $lt:3000}})
+
+//LISTAR LOS PRODUCTOS CON PRECIO MAYOR A 3000
+
+db.productos.find({'precio':{$gt:3000}})
+
+//TRAER SOLO EL NOMBRE DEL TERCER PRODUCTO MAS BARATO
+
+db.producto.find({"precio":{$lt:3000}}).limit(1).skip(2)
+
+//AGREGAR CAMPO STOCK A TODOS ELLOS CON UN VALOR DE 100
+
+db.productos.updateMany({},{$set:{stock:100}})
+
+//CAMBIAR EL STOCK A CERO DE LOS PRODUCTOS CON PRECIO MAYOR A 4000
+
+db.productos.updateMany({precio:{$gt:4000}},{$set:{stock:0}})
+
+//BORRAR PRODUCTOS CON PRECIO MENOR A 1000
+
+db.productos.deleteMany({"precio":{$lt:1000}})
+
+//CREAR UN USUARIO 'PEPE' CLAVE:'asd456' Y QUE SOLO PUEDA LEER LA BASE DE DATOS, NO CAMBIARLA
+
+db.createUser({"user": "pepe", "pwd": "asd456", "roles":[{role:"read",db:"ecommerce"}]})
+
+//LA COLECCION QUEDARIA DE ESTA FORMA:
+
+> db.productos.find()
+{ "_id" : ObjectId("621aab4b186c857eb1149bf8"), "nombre" : "mochila", "precio" : 1280, "stock" : 100 }
+{ "_id" : ObjectId("621aab4b186c857eb1149bf9"), "nombre" : "calculadora", "precio" : 1700, "stock" : 100 }
+{ "_id" : ObjectId("621aab4b186c857eb1149bfa"), "nombre" : "calculadora cientifica", "precio" : 2300, "stock" : 100 }
+{ "_id" : ObjectId("621aab4b186c857eb1149bfb"), "nombre" : "bolso", "precio" : 2860, "stock" : 100 }
+{ "_id" : ObjectId("621aab4b186c857eb1149bfc"), "nombre" : "campera", "precio" : 3350, "stock" : 100 }
+{ "_id" : ObjectId("621aab4b186c857eb1149bfd"), "nombre" : "monitor", "precio" : 4320, "stock" : 0 }
+{ "_id" : ObjectId("621aab4b186c857eb1149bfe"), "nombre" : "computadora", "precio" : 4990, "stock" : 0 }
+{ "_id" : ObjectId("621aab57186c857eb1149bff"), "nombre" : "bici", "precio" : 6000, "stock" : 0 }
+>                                                                                                                       
+
+*/
