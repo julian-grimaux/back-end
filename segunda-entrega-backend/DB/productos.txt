@@ -1,0 +1,12 @@
+[
+  {
+    "nombre": "Regla",
+    "precio": "122.32",
+    "descripcion": "regla de 10 cm",
+    "codigo": "121354",
+    "Stock": "100",
+    "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-512.png",
+    "timestamp": "13/03/2022 15:03:00",
+    "id": 1
+  }
+]

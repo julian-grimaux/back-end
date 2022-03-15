@@ -1,0 +1,12 @@
+[
+  {
+    "nombre": "Mochila",
+    "precio": "1235",
+    "descripcion": "mochila copada",
+    "codigo": "12355",
+    "Stock": "11",
+    "foto": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png",
+    "timestamp": "13/03/2022 15:03:00",
+    "id": 1
+  }
+]
