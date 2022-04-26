@@ -23,8 +23,4 @@ Proceso detallado para correr la app con nginx detallado en Docs/commands.md
 | GET    | **/info**        | Muestra información relativa a la app |
 | GET    | **/randoms**        | Devuelve una cantidad de números aleatorios en el rango del 1 al 1000 especificada por parámetros de consulta (query). Por ej: `/api/randoms?cant=20000`. Si dicho parámetro no se ingresa, calcula 100.000.000 de números. |
 
-### Detalles y comentarios
-# Autor
-Josefina Esnaola
-# Reconocimientos
-Equipo CoderHouse
+
