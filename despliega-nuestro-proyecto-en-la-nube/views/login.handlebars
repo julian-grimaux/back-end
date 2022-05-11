@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Login de Usuario</h1>
+    <form id="frmLogin" method="post" action="/login">
+        <div class="mb-3 row">
+            <label for="txtNombre" class="col-sm-2 col-form-label">Ingrese su nombre</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="txtNombre" id="title" placeholder="Ingrese su nombre">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="txtPassword" class="col-sm-2 col-form-label">Ingrese su contraseña</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="txtPassword" id="title" placeholder="Ingrese su contraseña">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <div class="col-sm-12">
+                <input class="btn btn-success" type="submit" value="Enviar" style="width: 100%;">
+                <a href="/registrarUsuario">Registrar usuario</a>
+            </div>
+        </div>
+    </form>
+</div>

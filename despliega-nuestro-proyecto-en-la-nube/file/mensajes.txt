@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "id": "jugrimaux@test.com",
+      "nombre": "Ariadna",
+      "apellido": "Acuña",
+      "edad": 17,
+      "alias": "a",
+      "avatar": "https://cdn.fakercloud.com/avatars/afusinatto_128.jpg"
+    },
+    "text": "sdsdsd"
+  }
+]
